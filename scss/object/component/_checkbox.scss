@@ -1,0 +1,60 @@
+/* checkbox */
+.c-checkbox {
+  display: none;
+  
+  + span {
+    cursor: pointer;
+    position: relative;
+    margin: 0;
+    padding: 0 1em 0 1.4em;
+    font-size: inherit;
+    box-sizing: border-box;
+    transition: opacity .25s ease;
+  }
+  + span::before {
+    content: "";
+    opacity: 1;
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 1em;
+    height: 1em;
+    border: 1px solid #979797;
+    border-radius: 2px;
+    background-color: #fff;
+    box-sizing: border-box;
+    transition: opacity .25s ease;
+    z-index: 1;
+  }
+  + span::after {
+    content: "";
+    opacity: 0;
+    display: block;
+    position: absolute;
+    top: 0.14em;
+    left: 0.42em;
+    width: 0.3em;
+    height: .6em;
+    border-bottom: 3px solid $base-color;;
+    border-right: 3px solid $base-color;;
+    box-sizing: border-box;
+    transform: rotate(40deg);
+    transition: all .25s;
+    z-index: 10;
+  }
+  &:checked + span {
+    color: $base-color;
+    transition: all .25s ease;
+  }
+  &:checked + span::before {
+    opacity: 0;
+  }
+  &:checked + span::after {
+    opacity: 1;
+    border-bottom: 2px solid $base-color;;
+    border-right: 2px solid $base-color;;
+    transform: rotate(400deg);
+    transition: all .25s;
+  }
+}

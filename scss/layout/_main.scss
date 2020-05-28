@@ -1,0 +1,11 @@
+.l-main {
+	padding-top: 30px;
+	padding-bottom: 60px;
+
+	.row + .row {
+		margin-top: 25px;
+		&.mv-wide {
+			margin-top: 35px;
+		}
+	}
+}
