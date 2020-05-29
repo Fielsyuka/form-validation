@@ -6,10 +6,10 @@ var autoprefixer = require('gulp-autoprefixer');
 
 
 gulp.task("default", function() {
-  return gulp.watch("scss/**/*.scss", function() {
+  return gulp.watch("public/scss/**/*.scss", function() {
     return (
       gulp
-        .src("scss/**/*.scss")
+        .src("public/scss/**/*.scss")
         .pipe(sourcemaps.init())
         .pipe(
           sass({
@@ -19,7 +19,7 @@ gulp.task("default", function() {
         )
         .pipe(autoprefixer())
         .pipe(sourcemaps.write('maps'))
-        .pipe(gulp.dest("css"))
+        .pipe(gulp.dest("public/css"))
     );
   });
 });
