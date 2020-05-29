@@ -6,7 +6,6 @@ var autoprefixer = require('gulp-autoprefixer');
 
 
 gulp.task("build", function() {
-  return gulp.watch("public/scss/**/*.scss", function() {
     return (
       gulp
         .src("public/scss/**/*.scss")
@@ -21,5 +20,9 @@ gulp.task("build", function() {
         .pipe(sourcemaps.write('maps'))
         .pipe(gulp.dest("public/css"))
     );
-  });
 });
+
+gulp.task('watch', function(){
+    return gulp.watch("public/scss/**/*.scss", gulp.series('build'));
+});
+
