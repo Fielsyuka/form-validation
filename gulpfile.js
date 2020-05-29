@@ -5,7 +5,7 @@ var sourcemaps = require('gulp-sourcemaps');
 var autoprefixer = require('gulp-autoprefixer');
 
 
-gulp.task("default", function() {
+gulp.task("build", function() {
   return gulp.watch("public/scss/**/*.scss", function() {
     return (
       gulp
