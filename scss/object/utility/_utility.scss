@@ -40,30 +40,13 @@
 
 /* 余白の汎用クラス */
 $num: 5;
-
-@for $i from 0 through 20 {
-  .mt-#{$i * $num} {
-    margin-top: #{$i * $num}px !important;
-  }
-  .mr-#{$i * $num} {
-    margin-right: #{$i * $num}px !important;
-  }
-  .mb-#{$i * $num} {
-    margin-bottom: #{$i * $num}px !important;
-  }
-  .ml-#{$i * $num} {
-    margin-left: #{$i * $num}px !important;
-  }
-  .pt-#{$i * $num} {
-    padding-top: #{$i * $num}px !important;
-  }
-  .pr-#{$i * $num} {
-    padding-right: #{$i * $num}px !important;
-  }
-  .pb-#{$i * $num} {
-    padding-bottom: #{$i * $num}px !important;
-  }
-  .pl-#{$i * $num} {
-    padding-left: #{$i * $num}px !important;
-  }
+@for $i from 0 through 5 {
+  .mt-#{$i * $num} { margin-top: #{$i * $num}px !important; }
+  .mr-#{$i * $num} { margin-right: #{$i * $num}px !important; }
+  .mb-#{$i * $num} { margin-bottom: #{$i * $num}px !important; }
+  .ml-#{$i * $num} { margin-left: #{$i * $num}px !important; }
+  .pt-#{$i * $num} { padding-top: #{$i * $num}px !important; }
+  .pr-#{$i * $num} { padding-right: #{$i * $num}px !important; }
+  .pb-#{$i * $num} { padding-bottom: #{$i * $num}px !important; }
+  .pl-#{$i * $num} { padding-left: #{$i * $num}px !important; }
 }

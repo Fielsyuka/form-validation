@@ -1,5 +1,8 @@
 (function(){
 
+	var form = document.getElementById("form");
+	var btn = document.getElementById("submit");
+
 	function Validation(id, label) {
 		this.dom = $(id);
 		this.label = label;
@@ -10,6 +13,7 @@
 		var text = this.dom.val();
 		if(text.length == 0) {
 			this.addErr();
+			event.preventDefault();
 		} else {
 			this.deleteErr();
 		}
@@ -25,9 +29,7 @@
 		this.dom.removeClass('err');
 	}	
 
-	var submit = document.getElementById("submit");
-
-	submit.addEventListener('click', function(){
+	btn.addEventListener('click', function(){
 		var validation1 = new Validation("#name", "お名前");
 		var validation2 = new Validation("#email", "メールアドレス");
 		var validation3 = new Validation("#message", "内容");
